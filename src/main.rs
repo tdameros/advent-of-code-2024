@@ -14,6 +14,7 @@ fn main() {
     match day {
         1 => days::day01::solve(),
         2 => days::day02::solve(),
+        3 => days::day03::solve(),
         _ => println!("Day not yet resolved!"),
     }
 }
