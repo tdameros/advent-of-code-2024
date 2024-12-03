@@ -45,7 +45,7 @@ fn solve_part_2(reports: &Vec<Vec<i32>>) -> i32 {
     result
 }
 
-fn is_safe_report(report: &Vec<i32>) -> bool {
+fn is_safe_report(report: &[i32]) -> bool {
     let is_increase = match report[0].cmp(&report[1]) {
         std::cmp::Ordering::Less => true,
         std::cmp::Ordering::Greater => false,
@@ -60,7 +60,7 @@ fn is_safe_report(report: &Vec<i32>) -> bool {
     true
 }
 
-fn is_safe_report_with_remove_index(report: &Vec<i32>, remove_index: u32) -> bool {
+fn is_safe_report_with_remove_index(report: &[i32], remove_index: u32) -> bool {
     let (sub, mut last_index, start_index) = match remove_index {
         0 => (report[1] - report[2], 1, 2),
         1 => (report[0] - report[2], 0, 2),
